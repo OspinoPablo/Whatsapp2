@@ -88,7 +88,7 @@ class _HomeIosState extends State<HomeIos> {
                                   Container(
                                     child: Row(
                                       mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
+                                          MainAxisAlignment.spaceAround,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
@@ -186,162 +186,10 @@ class _HomeIosState extends State<HomeIos> {
         },
       ),
     ),
-    Container(
-        child: Container(
-      width: 800,
-      height: 130,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            decoration: BoxDecoration(
-                border: Border.all(width: 2, color: Colors.green)),
-            padding: EdgeInsets.only(left: 10),
-            width: 800,
-            height: 30,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text('Status'),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.more_vert,
-                    color: Color(0xff222222),
-                  ),
-                )
-              ],
-            ),
-          ),
-          Container(
-            height: 80,
-            decoration:
-                BoxDecoration(border: Border.all(width: 2, color: Colors.red)),
-            child: Column(
-              children: [
-                Container(
-                  padding: EdgeInsets.only(left: 20),
-                  height: 70,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Stack(
-                        children: [
-                          Container(
-                            width: 62,
-                            height: 62,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                  'https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos-810x540.jpg',
-                                ),
-                                fit: BoxFit.cover,
-                              ),
-                              border: Border.all(width: 2),
-                              borderRadius: BorderRadius.circular(50),
-                            ),
-                          ),
-                          Positioned(
-                            bottom: 0,
-                            right: 0,
-                            child: Container(
-                              height: 24,
-                              width: 24,
-                              decoration: BoxDecoration(
-                                  color: Colors.green,
-                                  borderRadius: BorderRadius.circular(50)),
-                              child: Icon(
-                                Icons.add,
-                                size: 18,
-                                color: Colors.white,
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                      Column()
-                    ],
-                  ),
-                )
-              ],
-            ),
-          )
-        ],
-      ),
-      decoration: BoxDecoration(border: Border.all(width: 2)),
-    )),
+    Container(),
     Container(
       child: Column(
-        children: [
-          Container(
-            child: Row(
-              children: [
-                Container(
-                  width: 360,
-                  height: 100,
-                  decoration: BoxDecoration(border: Border.all(width: 2)),
-                  child: Stack(
-                    children: [
-                      Stack(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(top: 12, bottom: 12),
-                            width: 60,
-                            height: 100,
-                            decoration: BoxDecoration(
-                                border: Border.all(width: 2),
-                                color: Color(0xffb4b4b4),
-                                borderRadius: BorderRadius.circular(12)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.groups_2,
-                                  size: 38,
-                                  color: Colors.white,
-                                )
-                              ],
-                            ),
-                          ),
-                          Positioned(
-                            bottom: 13,
-                            right: 0,
-                            child: Container(
-                              width: 20,
-                              height: 20,
-                              decoration: BoxDecoration(
-                                  color: Color(0xff616161),
-                                  borderRadius: BorderRadius.circular(50)),
-                              child: Container(
-                                margin: EdgeInsets.all(10),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                          color: Colors.green,
-                                          borderRadius:
-                                              BorderRadius.circular(50)),
-                                      child: Icon(Icons.add),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            ),
-          )
-        ],
+        children: [],
       ),
     ),
   ];
@@ -460,9 +308,25 @@ class _HomeIosState extends State<HomeIos> {
         onPressed: () {},
         child: Icon(Icons.add_comment_sharp, color: Colors.white)),
     FloatingActionButton(
-      onPressed: () {},
-      child: Icon(Icons.radar),
-    ),
+        onPressed: () {},
+        child: Container(
+          width: 30,
+          height: 60,
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                    border: Border.all(width: 2),
+                    borderRadius: BorderRadius.circular(10)),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    border: Border.all(width: 2),
+                    borderRadius: BorderRadius.circular(10)),
+              )
+            ],
+          ),
+        )),
     FloatingActionButton(
       onPressed: () {},
       child: Icon(Icons.groups_2),
